@@ -101,10 +101,7 @@ The directory structure of your new project looks like this:
 
     pip install -r requirements.txt
 
-### Running the tests
-------------
 
-    py.test tests
 
 ### Code Formatter
 ------------
