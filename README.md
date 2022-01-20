@@ -62,6 +62,9 @@ The directory structure of your new project looks like this:
 │   ├                     `1.0-jqp-initial-data-exploration`.
 │   ├── development      <- Initial experiments 
 │   ├── azureml_pipeline <- Creating the azureml pipeline in this folder to submit jobs
+│         │  
+│         └── 00-af-azureml_pipeline_tutorial.ipynb  <- Template for running pipelines on AzureML
+│
 │   ├── README.md        <- Describe experiments in high-level (and provide reference in notebooks)
 │
 ├── references         <- Data dictionaries, research papers, and all other explanatory materials.
