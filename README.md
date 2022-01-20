@@ -106,11 +106,9 @@ The directory structure of your new project looks like this:
 ### Code Formatter
 ------------
 Black is the uncompromising Python code formatter. Use black to reformat your repo according to the PEP8 guidelines.\
+It is already in the requirements.txt
 Github page [here](https://github.com/psf/black).
 
-
-    pip install black
-    pip install black[jupyter]
     black {source_file_or_directory}
 
 
