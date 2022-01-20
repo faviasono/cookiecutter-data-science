@@ -31,15 +31,6 @@ $ conda install cookiecutter
 
 [![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
 
-### New version of Cookiecutter Data Science
-------------
-Cookiecutter data science is moving to v2 soon, which will entail using
-the command `ccds ...` rather than `cookiecutter ...`. The cookiecutter command
-will continue to work, and this version of the template will still be available.
-To use the legacy template, you will need to explicitly use `-c v1` to select it.
-Please update any scripts/automation you have to append the `-c v1` option (as above),
-which is available now.
-
 
 ### The resulting directory structure
 ------------
@@ -50,19 +41,22 @@ The directory structure of your new project looks like this:
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
-├── data
+│
+├── data              
 │   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
 │   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+│   └── raw            <- The original, immutable data dump: Use .CSV/txt format to map names to files in Cloud storage.
 │
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── models             <- Trained and serialized models, model predictions, or model summaries: store initial models
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+│   ├                      the creator's initials, and a short `-` delimited description, e.g.
+│   ├                     `1.0-jqp-initial-data-exploration`.
+│   ├── development      <- Initial experiments 
+│   ├── azureml_pipeline <- Creating the azureml pipeline in this folder to submit jobs
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -93,9 +87,6 @@ The directory structure of your new project looks like this:
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
 
-## Contributing
-
-We welcome contributions! [See the docs for guidelines](https://drivendata.github.io/cookiecutter-data-science/#contributing).
 
 ### Installing development requirements
 ------------
