@@ -3,6 +3,8 @@
 _A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
 
 
+
+
 #### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
 
 
@@ -26,7 +28,7 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
+    cookiecutter  https://github.com/faviasono/cookiecutter-data-science
 
 
 [![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
@@ -41,13 +43,14 @@ The directory structure of your new project looks like this:
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
+├── .azureml     
+│      └── config.json <- Add AzureML workspace information        
 │
 ├── data              
-│   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
 │   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump: Use .CSV/txt format to map names to files in Cloud storage.
-│        │
+│   └── raw            <- The original, immutable data dump: Use .CSV/txt format to map 
+│        │                 names to files in Cloud storage.                   
 │        └── README.md <- Describe data you will use in your project.   
 │
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
@@ -61,7 +64,7 @@ The directory structure of your new project looks like this:
 │   ├── azureml_pipeline <- Creating the azureml pipeline in this folder to submit jobs
 │   ├── README.md        <- Describe experiments in high-level (and provide reference in notebooks)
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+├── references         <- Data dictionaries, research papers, and all other explanatory materials.
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
@@ -102,3 +105,25 @@ The directory structure of your new project looks like this:
 ------------
 
     py.test tests
+
+### Code Formatter
+------------
+Black is the uncompromising Python code formatter. Use black to reformat your repo according to the PEP8 guidelines.\
+Github page [here](https://github.com/psf/black).
+
+
+    pip install black
+    pip install black[jupyter]
+    black {source_file_or_directory}
+
+
+## Extra resources for coding
+
+### [The seven rules of a great Git commit message](https://heady-booth-f73.notion.site/The-seven-rules-of-a-great-Git-commit-message-acd037698a574974b9b18edb6f72960d): how to write effective and useful git commits for collaboration
+
+### [Mypy - Python Type Hints](https://heady-booth-f73.notion.site/Typing-ffa6a8b1f824451ca7d9542ef3030fcf): using Python type hints to quick test code
+
+
+### [Toxi](https://tox.readthedocs.io): automate and standardize testing in Python
+
+### [Sphinx ](https://www.sphinx-doc.org/en/master/): intelligent and beautiful documentation
