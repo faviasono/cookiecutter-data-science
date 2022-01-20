@@ -47,6 +47,8 @@ The directory structure of your new project looks like this:
 │   ├── interim        <- Intermediate data that has been transformed.
 │   ├── processed      <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data dump: Use .CSV/txt format to map names to files in Cloud storage.
+│        │
+│        └── README.md <- Describe data you will use in your project.   
 │
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
 │
@@ -57,6 +59,7 @@ The directory structure of your new project looks like this:
 │   ├                     `1.0-jqp-initial-data-exploration`.
 │   ├── development      <- Initial experiments 
 │   ├── azureml_pipeline <- Creating the azureml pipeline in this folder to submit jobs
+│   ├── README.md        <- Describe experiments in high-level (and provide reference in notebooks)
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -67,19 +70,21 @@ The directory structure of your new project looks like this:
 │                         generated with `pip freeze > requirements.txt`
 │
 ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-├── src                <- Source code for use in this project.
+├── src                <- Source code for use in this project: it will be used during the creation of the pipeline for AzureML.
 │   ├── __init__.py    <- Makes src a Python module
 │   │
 │   ├── data           <- Scripts to download or generate data
 │   │   └── make_dataset.py
 │   │
 │   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
+│   │   ├── build_features.py
+│   │   └──README.md   <- Describe the preprocessing steps at high-level. Add the WHY to the description.
 │   │
 │   ├── models         <- Scripts to train models and then use trained models to make
 │   │   │                 predictions
 │   │   ├── predict_model.py
-│   │   └── train_model.py
+│   │   ├── train_model.py
+│   │   └──README.md   <- Describe the molde used at high-level. Add the WHY to the description.
 │   │
 │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
 │       └── visualize.py
